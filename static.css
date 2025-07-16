@@ -1,0 +1,148 @@
+
+body { 
+    background-image: url('/img/fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+#nome {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgb(0, 61, 175);
+    margin: 0;
+}
+
+#profile-pic {
+    width: 50px;  /* Ou o tamanho que preferir */
+    height: 50px; /* Mantenha o mesmo valor da largura para um círculo perfeito */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    /* A classe 'profile-circle' provavelmente já tem o border-radius, mas se não tiver, adicione: */
+    border-radius: 50%; 
+}
+
+
+.profile-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(100, 100, 100);
+    border: 3px solid rgb(0, 61, 175);
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+/* When you add your picture, use this class */
+.profile-circle.with-image {
+    background-image: url('/img/foto.jpg');
+}
+
+
+#projects i{ 
+    font-size: 1.2rem; /* Ajustado para melhor alinhamento com o texto */
+}
+
+#card-principal { 
+    background-color: rgb(47, 47, 47);
+}
+
+#card-profile { 
+    background-color: rgb(15, 15, 15);
+}
+
+.card-title-custom { 
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 1000;
+    font-style: italic;
+    color: rgb(0, 61, 175);
+}
+
+#skills { 
+    font-size: 2rem;
+    
+} 
+
+#skills i:hover { 
+    color: orange; /* Tomato color */
+    transform: translate(1px, -1px);
+}
+
+
+#contact-body { 
+    font-size: 2rem;
+   
+}
+
+#contact-body i:hover { 
+    color: #002cb1; /* Tomato color */
+    transform: translate(1px, -1px);
+}
+
+#instagram { 
+    background: linear-gradient(45deg, rgb(226, 0, 165), rgb(250, 230, 97));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+#linkedin { 
+    color: rgb(44, 44, 208); 
+}
+
+#email { 
+    color: rgb(224, 115, 115);
+}
+
+.project-link {
+    color: #000000; /* Cor clara para o texto no card escuro */
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* Espaço entre o ícone e o texto */
+    transition: color 0.2s ease-in-out;
+    padding: 0.25rem 0;
+}
+
+.project-link:hover {
+    color: #daba00; /* Efeito hover consistente com as skills */
+}
+
+
+
+/* Preloader Styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000; /* Mesma cor de fundo do body */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.75s ease-out, visibility 0.75s ease-out;
+}
+
+.loader {
+    border: 8px solid rgb(47, 47, 47); /* Cinza escuro */
+    border-top: 8px solid #daba00; /* Amarelo do tema */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+}
+
+/* Classe para esconder o preloader com uma transição suave */
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+

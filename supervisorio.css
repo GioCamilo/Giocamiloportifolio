@@ -1,0 +1,42 @@
+
+body { 
+    background-color: rgb(0, 0, 0)!important;
+}
+
+.menu { 
+    width: 40%;
+    height: 40vh;
+}
+
+
+#tecnologias { 
+    font-size: 3rem;
+    color: white;
+    
+} 
+
+#tecnologias i:hover { 
+    color: #daba00; /* Tomato color */
+    transform: translate(1px, -1px);
+}
+
+.titulo{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: rgb(0, 61, 175);
+  font-size: 4rem;
+}
+
+
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; /* Adjust duration and easing as needed */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
