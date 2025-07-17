@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="static.css">
+    <link rel="stylesheet" href="static/css/static.css">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
                             <div class="card d-flex  justify-content-center" id="card-profile">
                                 <h6 class="text-center mt-3 mb-3" style="color:white" id="nome">Giovanni Camilo <span style="color: orange;">| DEV</span></h6>
                                 <p class="d-flex justify-content-center" style="color:white;font-size:0.9rem">
-                                    Junior Fullstack Developer
+                                    System Developer
                                 </p> 
                             </div>                            
                         </div>
@@ -48,16 +48,18 @@
                         <div class="col-md-12 mt-2"> 
                             <div class="card"> 
                                 <div class="card-header py-1"><h6 class=" text-center card-title-custom">Skills</h6></div>
-                                <div class="card-body d-flex justify-content-center gap-3" id="skills">   
-                                    <i class="fa-brands fa-html5"></i>
-                                    <i class="fa-brands fa-css3-alt"></i>
-                                    <i class="fa-brands fa-js"></i>
-                                    <i class="fa-brands fa-linux"></i>
-                                    <i class="fa-brands fa-git"></i>
-                                    <i class="fa-brands fa-bootstrap"></i>
-                                    <i class="fa-brands fa-python"></i>
-                                    <i class="fa-brands fa-wordpress"></i>
-                                    <i class="fa-brands fa-react"></i>
+                                <div class="card-body d-flex justify-content-center gap-3" id="skills"> 
+                                    <div class="brand-container">  
+                                        <i class="fa-brands fa-html5"></i>
+                                        <i class="fa-brands fa-css3-alt"></i>
+                                        <i class="fa-brands fa-js"></i>
+                                        <i class="fa-brands fa-linux"></i>
+                                        <i class="fa-brands fa-git"></i>
+                                        <i class="fa-brands fa-bootstrap"></i>
+                                        <i class="fa-brands fa-python"></i>
+                                        <i class="fa-brands fa-wordpress"></i>
+                                        <i class="fa-brands fa-react"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +75,7 @@
                                         <i class="fa-solid fa-industry fa-fw"></i>
                                         <span>Supervisório de Máquinas</span>
                                     </a>
-                                    <a href="coletor.html" class="project-link"> 
+                                    <a href="conversor.html" class="project-link"> 
                                         <i class="fa-regular fa-file-code fa-fw"></i>
                                         <span>Pdf to Excel data converter</span>
                                     </a>
@@ -108,17 +110,7 @@
                                 </div>
                             </div>
 
-                            <div class="card mt-2"> 
-                                <div class="card-header py-1">
-                                    <h6 class="text-center card-title-custom">Encrypted E-mail</h6>
-                                </div>
-                                <div class="card-body bg-dark">
-                                    <p class="text-center" style="color:white;">
-                                        <span id="encrypted-email"></span>
-                                    </p>
-                                </div>
-
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -130,26 +122,7 @@
 
 
                         
-<script src="script.js"></script>
-<script>
-    // Function to decrypt the email address
-    function decryptEmail(encryptedEmail) {
-      let decryptedEmail = atob(encryptedEmail);
-      return decryptedEmail;
-    }
-
-    // Encrypted email address (replace with your actual encrypted email)
-    const encryptedEmail = "Z2lvY2FtaWxvZGV2QGdtYWlsLmNvbQ=="; 
-
-    // Get the element where the email will be displayed
-    const emailElement = document.getElementById('encrypted-email');
-
-    // Decrypt and set the email address, and make it a clickable link
-    if (emailElement) {
-      const decryptedEmailAddress = decryptEmail(encryptedEmail);
-      emailElement.innerHTML = `<a href="mailto:${decryptedEmailAddress}" style="color:white;">${decryptedEmailAddress}</a>`;
-    }
-</script>
+<script src="static/js/script.js"></script>
 
 
 

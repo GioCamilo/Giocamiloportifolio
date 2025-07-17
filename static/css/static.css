@@ -1,11 +1,12 @@
 
 body { 
-    background-image: url('img/fundo.jpg');
+    background-image: url('../../img/fundo.jpg')!important;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="orange" stroke="black" stroke-width="1.5" d="M6,2 L26,13 L17.72,15.07 L16,24.35 L6,2 Z"/></svg>'), auto;
 
+}
 
 
 #nome {
@@ -71,6 +72,15 @@ body {
     transform: translate(1px, -1px);
 }
 
+.brand-container { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 0.4rem;
+}
 
 #contact-body { 
     font-size: 2rem;
