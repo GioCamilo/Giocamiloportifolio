@@ -1,21 +1,23 @@
-(function(){
-    emailjs.init("yNkZwh8swnikQxpXD"); // substitua pela sua public key do EmailJS
-  })();
+/* global emailjs */
 
-  function enviarEmail(event) {
-    event.preventDefault();
+(function() {
+  // Inicializa o EmailJS com sua public key
+  emailjs.init("yNkZwh8swnikQxpXD");
+})();
 
-    const msg = document.getElementById("statusMsg");
+function enviarEmail(event) {
+  event.preventDefault();
 
-    emailjs.sendForm("service_z3prova", "template_4a13sob", event.target)
+  const msg = document.getElementById("statusMsg");
+
+  emailjs.sendForm("service_z3prova", "template_4a13sob", event.target)
     .then(() => {
-        msg.textContent = "✅ Mensagem enviada com sucesso! Em breve entraremos em contato.";
-        msg.style.color = "green";
-        event.target.reset();
+      msg.textContent = "✅ Mensagem enviada com sucesso! Em breve entraremos em contato.";
+      msg.style.color = "green";
+      event.target.reset();
     })
     .catch((error) => {
-        msg.textContent = "❌ Erro ao enviar: " + error.text;
-        msg.style.color = "red";
+      msg.textContent = "❌ Erro ao enviar: " + error.text;
+      msg.style.color = "red";
     });
-
-  }
+}
