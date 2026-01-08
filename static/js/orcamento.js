@@ -9,6 +9,23 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("❌ Erro: a biblioteca EmailJS não foi carregada.");
   }
 
+document.addEventListener("DOMContentLoaded", () => {
+  // garante que reply_to, pagina e datahora sejam preenchidos automaticamente
+  const emailInput = document.getElementById("emailInput");
+  const replyTo = document.getElementById("reply_to");
+  const pagina = document.getElementById("pagina");
+  const datahora = document.getElementById("datahora");
+
+  // atualiza reply_to sempre que o usuário digitar o e-mail
+  if (emailInput && replyTo) {
+    emailInput.addEventListener("input", () => replyTo.value = emailInput.value);
+  }
+
+  // preenche página e data/hora
+  if (pagina) pagina.value = window.location.href;
+  if (datahora) datahora.value = new Date().toLocaleString();
+});
+
   // Função de envio
   window.enviarEmail = function (event) {
     event.preventDefault();
