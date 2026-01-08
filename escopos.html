@@ -35,23 +35,25 @@
                     <div class="card mt-4" style="overflow:hidden;">
                         <div class="card-body" style="height:370px">
                             <h5 class="card-title">About the project</h5>
-                            <p class="card-text">
-                                In the Escopo Project, we optimized the process of creating projects and scopes within the Industrial Engineering and Maintenance departments at Mangels.
+                            <div id="about-scroll" class="about-scroll">
+                                <p class="card-text">
+                                    In the Escopo Project, we optimized the process of creating projects and scopes within the Industrial Engineering and Maintenance departments at Mangels.
 
-                                The goal was to make scope and project creation faster, more practical, and standardized, eliminating the reliance on Excel spreadsheets filled with complex and hard-to-maintain formulas.
+                                    The goal was to make scope and project creation faster, more practical, and standardized, eliminating the reliance on Excel spreadsheets filled with complex and hard-to-maintain formulas.
 
-                                With the new solution, the process becomes more agile, allowing projects and scopes to be created in just a few clicks, while improving data clarity and overall organization.
+                                    With the new solution, the process becomes more agile, allowing projects and scopes to be created in just a few clicks, while improving data clarity and overall organization.
 
-                                Key features include:
+                                    Key features include:
 
-                                Structured data storage in a database
+                                    Structured data storage in a database
 
-                                Intelligent memory, enabling users to reuse recurring inputs and avoid repetitive work
+                                    Intelligent memory, enabling users to reuse recurring inputs and avoid repetitive work
 
-                                Improved organization and management of created projects, supporting more detailed analysis and historical tracking
+                                    Improved organization and management of created projects, supporting more detailed analysis and historical tracking
 
-                                The project continues to evolve with a focus on operational efficiency, standardization, and ease of use for the engineering teams.
-                            </p>
+                                    The project continues to evolve with a focus on operational efficiency, standardization, and ease of use for the engineering teams.
+                                </p>
+                            </div>
 
                             <div class="tools-container mt-3">
                                 <span class="badge text-bg-danger">Python</span>
@@ -139,6 +141,30 @@
     </div>
 
     <!-- Bootstrap JS Bundle (necessário para o carrossel e outros componentes interativos) -->
+    <script>
+        const aboutScroll = document.getElementById('about-scroll');
+        if (aboutScroll) {
+            let paused = false;
+            aboutScroll.addEventListener('mouseenter', () => {
+                paused = true;
+            });
+            aboutScroll.addEventListener('mouseleave', () => {
+                paused = false;
+            });
+
+            const scrollStep = () => {
+                if (!paused) {
+                    aboutScroll.scrollTop += 0.35;
+                    if (aboutScroll.scrollTop >= aboutScroll.scrollHeight - aboutScroll.clientHeight) {
+                        aboutScroll.scrollTop = 0;
+                    }
+                }
+                requestAnimationFrame(scrollStep);
+            };
+
+            requestAnimationFrame(scrollStep);
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
     
