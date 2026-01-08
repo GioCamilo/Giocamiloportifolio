@@ -20,11 +20,6 @@ body {
     gap: 0.4rem;
 }
 
-.about-scroll {
-    height: 210px;
-    overflow: hidden;
-}
-
 #tecnologias { 
     font-size: 3rem;
     color: white;
