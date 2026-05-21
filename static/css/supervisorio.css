@@ -1,4 +1,5 @@
 
+
 body { 
     background-color: rgb(0, 0, 0)!important;
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="orange" stroke="black" stroke-width="1.5" d="M6,2 L26,13 L17.72,15.07 L16,24.35 L6,2 Z"/></svg>'), auto;
@@ -46,3 +47,152 @@ body {
     to { opacity: 1; }
 }
 
+
+body {
+    background: radial-gradient(circle at top left, rgba(13, 110, 253, 0.25), transparent 35%), var(--dark-bg);
+    color: #fff;
+    font-family: "Fira Sans", sans-serif;
+}
+
+.project-page {
+    padding: 32px 18px 56px;
+}
+
+.titulo {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    font-size: clamp(3rem, 6vw, 5.8rem);
+    line-height: 0.95;
+}
+
+.section-title {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    font-size: clamp(2rem, 3vw, 3rem);
+    color: #fff;
+}
+
+.text-muted-project {
+    color: var(--muted-text);
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    color: #fff;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.project-card .card-title {
+    color: #fff;
+    font-weight: 700;
+}
+
+.badge-tech {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(13, 110, 253, 0.12);
+    color: #e8f1ff;
+    border-radius: 999px;
+    padding: 8px 13px;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.metric-card {
+    min-height: 128px;
+}
+
+.metric-number {
+    color: var(--primary-blue);
+    font-size: 2.1rem;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.architecture-flow {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(130px, 1fr));
+    gap: 14px;
+}
+
+.flow-item {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    padding: 18px 14px;
+    text-align: center;
+    min-height: 132px;
+}
+
+.flow-item i {
+    color: var(--primary-blue);
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.feature-icon {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    color: #fff;
+    background: rgba(13, 110, 253, 0.22);
+    margin-bottom: 14px;
+}
+
+.carousel img {
+    max-height: 520px;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,.16);
+}
+
+.video-frame {
+    border: 1px solid rgba(255,255,255,.16);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+.list-check {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.list-check li {
+    margin-bottom: 10px;
+    color: var(--muted-text);
+}
+
+.list-check li::before {
+    content: "✓";
+    color: var(--primary-blue);
+    font-weight: 800;
+    margin-right: 8px;
+}
+
+#tecnologias i {
+    font-size: 2.1rem;
+    color: #fff;
+    transition: transform .2s ease, color .2s ease;
+}
+
+#tecnologias i:hover {
+    transform: translateY(-4px);
+    color: var(--primary-blue);
+}
+
+@media (max-width: 992px) {
+    .architecture-flow {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .architecture-flow {
+        grid-template-columns: 1fr;
+    }
+}

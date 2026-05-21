@@ -1,138 +1,426 @@
-
-body { 
-    background-image: url('../../img/fundo.jpg')!important;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="orange" stroke="black" stroke-width="1.5" d="M6,2 L26,13 L17.72,15.07 L16,24.35 L6,2 Z"/></svg>'), auto;
-
+* {
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
-#nome {
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 600;
-    font-size: 1.2rem;
-    color: rgb(0, 61, 175);
+body {
+    min-height: 100vh;
     margin: 0;
+    background:
+        radial-gradient(circle at top left, rgba(51, 102, 255, 0.18), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(255, 162, 0, 0.14), transparent 22%),
+        linear-gradient(135deg, #0a0d12 0%, #11151d 42%, #07090d 100%);
+    background-attachment: fixed;
+    color: #edf1f7;
+    font-family: "Fira Sans", sans-serif;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="orange" stroke="black" stroke-width="1.5" d="M6,2 L26,13 L17.72,15.07 L16,24.35 L6,2 Z"/></svg>'), auto;
 }
 
-#profile-pic {
-    width: 50px;  /* Ou o tamanho que preferir */
-    height: 50px; /* Mantenha o mesmo valor da largura para um círculo perfeito */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-    /* A classe 'profile-circle' provavelmente já tem o border-radius, mas se não tiver, adicione: */
-    border-radius: 50%; 
+.portfolio-shell {
+    position: relative;
+    overflow: hidden;
 }
 
+.portfolio-shell::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), transparent 85%);
+    opacity: 0.35;
+}
+
+.hero-panel,
+.portfolio-section {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-card,
+.profile-card,
+.panel-card,
+.project-card {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.hero-card,
+.profile-card {
+    padding: 2rem;
+}
+
+.eyebrow,
+.section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #8fb2ff;
+}
+
+.eyebrow::before,
+.section-kicker::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: #4d7cff;
+}
+
+.hero-title {
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(3.2rem, 7vw, 6.2rem);
+    line-height: 0.95;
+    color: #f5f7fb;
+}
+
+.hero-title span {
+    color: #ffb347;
+}
+
+.hero-text,
+.profile-bio,
+.about-text,
+.section-note {
+    color: rgba(237, 241, 247, 0.78);
+    line-height: 1.8;
+}
+
+.hero-actions .btn {
+    padding: 0.85rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, #4d7cff, #ffb347);
+    border: none;
+    color: #0b1020;
+}
+
+.btn-accent:hover {
+    color: #0b1020;
+    filter: brightness(1.05);
+}
+
+.btn-outline-light {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #f5f7fb;
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+}
+
+.hero-meta {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.meta-item {
+    padding: 1rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.meta-value {
+    display: block;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.meta-label {
+    display: block;
+    margin-top: 0.35rem;
+    color: rgba(237, 241, 247, 0.72);
+    line-height: 1.45;
+    font-size: 0.92rem;
+}
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
 .profile-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: rgb(100, 100, 100);
-    border: 3px solid rgb(0, 61, 175);
-    background-size: cover;
-    background-position: center;
+    width: 74px;
+    height: 74px;
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 30% 30%, rgba(255, 179, 71, 0.35), transparent 45%),
+        linear-gradient(135deg, rgba(77, 124, 255, 0.55), rgba(255, 77, 77, 0.38));
+    border: 1px solid rgba(255, 255, 255, 0.14);
     flex-shrink: 0;
 }
 
-/* When you add your picture, use this class */
-.profile-circle.with-image {
-    background-image: url('/img/foto.jpg');
+#nome {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-weight: 800;
 }
 
-
-#projects i{ 
-    font-size: 1.2rem; /* Ajustado para melhor alinhamento com o texto */
+#nome span {
+    color: #ffb347;
 }
 
-#card-principal { 
-    background-color: rgb(47, 47, 47);
+.profile-role {
+    color: rgba(237, 241, 247, 0.72);
 }
 
-#card-profile { 
-    background-color: rgb(15, 15, 15);
+.quick-list {
+    display: grid;
+    gap: 0.8rem;
 }
 
-.card-title-custom { 
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 1000;
-    font-style: italic;
-    color: rgb(0, 61, 175);
+.quick-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.9rem 1rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #edf1f7;
 }
 
-#skills { 
-    font-size: 2rem;
-    
-} 
-
-#skills i:hover { 
-    color: orange; /* Tomato color */
-    transform: translate(1px, -1px);
+.quick-item i {
+    margin-top: 0.18rem;
+    color: #ffb347;
 }
 
-.brand-container { 
+.section-title {
+    color: #ffffff;
+    font-size: clamp(1.45rem, 2.4vw, 2rem);
+    font-weight: 800;
+}
+
+.section-note {
+    font-size: 0.95rem;
+}
+
+.panel-card {
+    border-radius: 24px;
+}
+
+.skills-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    gap: 0.4rem;
+    gap: 0.8rem;
 }
 
-#contact-body { 
-    font-size: 2rem;
-   
-}
-
-#contact-body i:hover { 
-    color: #002cb1; /* Tomato color */
-    transform: translate(1px, -1px);
-}
-
-#instagram { 
-    background: linear-gradient(45deg, rgb(226, 0, 165), rgb(250, 230, 97));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-
-#linkedin { 
-    color: rgb(44, 44, 208); 
-}
-
-#email { 
-    color: rgb(224, 115, 115);
-}
-
-.project-link {
-    color: #000000; /* Cor clara para o texto no card escuro */
-    text-decoration: none;
-    font-size: 0.9rem;
+.skill-chip {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem; /* Espaço entre o ícone e o texto */
-    transition: color 0.2s ease-in-out;
-    padding: 0.25rem 0;
+    gap: 0.55rem;
+    padding: 0.7rem 0.95rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.96);
+    color: #101827;
+    font-weight: 700;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.project-link:hover {
-    color: #daba00; /* Efeito hover consistente com as skills */
+.skill-chip i {
+    color: #4d7cff;
 }
 
+.skill-chip:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
 
+.project-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
 
-/* Preloader Styles */
+.project-card {
+    height: 100%;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.96);
+    color: #111827;
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 179, 71, 0.38);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.38);
+}
+
+.project-card.featured {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 245, 235, 0.96));
+}
+
+.project-card-head {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.project-icon {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(77, 124, 255, 0.13);
+    color: #ffb347;
+    font-size: 1.1rem;
+}
+
+.project-label {
+    color: #a9b4c7;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+}
+
+.project-card h4 {
+    color: #000000;
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.project-card p {
+    color: rgba(0, 0, 0, 0.78);
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+}
+
+.project-link-inline {
+    color: #ffb347;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.about-text {
+    margin-bottom: 0;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 0.95rem;
+    font-size: 2rem;
+}
+
+.contact-icons a {
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(77, 124, 255, 0.12);
+    color: #111827;
+    text-decoration: none;
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.panel-card .section-title,
+.panel-card .about-text,
+.panel-card .budget-link {
+    color: #111827;
+}
+
+.panel-card .section-kicker {
+    color: #4d7cff;
+}
+
+.panel-card .section-kicker::before {
+    background: #4d7cff;
+}
+
+.contact-icons a:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 179, 71, 0.12);
+    color: #111827;
+}
+
+.budget-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.85rem 1.1rem;
+    background: linear-gradient(135deg, #4d7cff, #ffb347);
+    color: #0b1020;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.budget-link:hover {
+    color: #0b1020;
+    filter: brightness(1.05);
+}
+
+#card-principal,
+#card-profile,
+.card {
+    border: 0;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.9s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#skills {
+    font-size: 1rem;
+}
+
+#skills i:hover {
+    color: #ffb347;
+    transform: translateY(-1px);
+}
+
 #preloader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #000; /* Mesma cor de fundo do body */
+    background-color: #05070a;
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -141,18 +429,54 @@ body {
 }
 
 .loader {
-    border: 8px solid rgb(47, 47, 47); /* Cinza escuro */
-    border-top: 8px solid #daba00; /* Amarelo do tema */
+    border: 8px solid rgba(255, 255, 255, 0.12);
+    border-top: 8px solid #ffb347;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     animation: spin 1.5s linear infinite;
 }
 
-/* Classe para esconder o preloader com uma transição suave */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .preloader-hidden {
     opacity: 0;
     visibility: hidden;
 }
 
+@media (max-width: 991.98px) {
+    .hero-meta {
+        grid-template-columns: 1fr;
+    }
+}
 
+@media (max-width: 767.98px) {
+    .hero-card,
+    .profile-card,
+    .panel-card,
+    .project-card {
+        border-radius: 22px;
+    }
+
+    .hero-card,
+    .profile-card {
+        padding: 1.4rem;
+    }
+
+    .contact-icons {
+        font-size: 1.5rem;
+    }
+
+    .contact-icons a {
+        width: 46px;
+        height: 46px;
+    }
+}

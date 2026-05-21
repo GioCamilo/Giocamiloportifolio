@@ -3,140 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giovanni Camilo DEV projeto Coletor</title>
+    <title>Giovanni Camilo DEV | Escopo Project</title>
 
     <link rel="stylesheet" href="static/css/escopo.css">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font awasome -->
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-
 </head>
 <body>
+    <div class="page-shell fade-in">
+        <div class="container-fluid px-3 px-lg-5 py-4 py-lg-5">
 
-    <div class="container-fluid fade-in">
-
-        <div class="row align-items-stretch"> 
-
-            <div class="col-md-4 mt-4"> 
-                    <div  class="card-body"> 
-                        <h1 class="titulo" style="color: white;">Optimized <span style="color: rgb(240, 0, 0);"> Projects and Scopes</span></h1>
-                    </div>
-            
-                
-                    <div class="card mt-4 h-10" style="overflow:hidden;">
-                        <div class="card-body">
-                            <h5 class="card-title">About the project</h5>
-                            <p class="card-text">
-                                In the Escopo Project, we optimized the process of creating projects and scopes within the Industrial Engineering and Maintenance departments at Mangels.
-
-                                The goal was to make scope and project creation faster, more practical, and standardized, eliminating the reliance on Excel spreadsheets filled with complex and hard-to-maintain formulas.
-
-                                With the new solution, the process becomes more agile, allowing projects and scopes to be created in just a few clicks, while improving data clarity and overall organization.
-
-                                Key features include:
-
-                                Structured data storage in a database
-
-                                Intelligent memory, enabling users to reuse recurring inputs and avoid repetitive work
-
-                                Improved organization and management of created projects, supporting more detailed analysis and historical tracking
-
-                                The project continues to evolve with a focus on operational efficiency, standardization, and ease of use for the engineering teams.
+            <section class="hero-panel mb-4">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-5">
+                        <div class="hero-copy h-100">
+                            <p class="eyebrow mb-2">Internal Web System</p>
+                            <h1 class="titulo mb-3">Project <span>Manager</span></h1>
+                            <p class="lead-copy mb-4">
+                                Plataforma web criada para centralizar a criação de projetos e escopos, substituindo planilhas complexas por um fluxo mais rápido, padronizado e rastreável.
                             </p>
 
-                            <div class="tools-container mt-3">
-                                <span class="badge text-bg-danger">Python</span>
-                                <span class="badge text-bg-danger">Flask</span>
-                                <span class="badge text-bg-danger">Docker</span>
-                                <span class="badge text-bg-danger">Linux</span>
-                                <span class="badge text-bg-danger">HTML5</span>
-                                <span class="badge text-bg-danger">CSS</span>
-                                <span class="badge text-bg-danger">Bootstrap</span>
-                                <span class="badge text-bg-danger">JavaScript</span>
+                            <div class="hero-stats">
+                                <div class="stat-card">
+                                    <span class="stat-value">+ agilidade</span>
+                                    <span class="stat-label">Menos etapas manuais no fluxo de abertura</span>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-value">+ controle</span>
+                                    <span class="stat-label">Numeração, histórico e consulta centralizados</span>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-value">+ padrão</span>
+                                    <span class="stat-label">Informações consistentes entre setores</span>
+                                </div>
                             </div>
                         </div>
-                        
                     </div>
 
-                    </div>
+                    <div class="col-lg-7">
+                        <div class="gallery-panel h-100">
+                            <div id="carouselExampleControls" class="carousel slide h-100" data-bs-ride="carousel">
+                                <div class="carousel-inner h-100 rounded-4 overflow-hidden">
+                                    <div class="carousel-item active h-100">
+                                        <img class="d-block w-100 h-100 object-fit-cover" src="img/escopo/antes.png" alt="Processo anterior baseado em planilhas e controles manuais">
+                                    </div>
+                                    <div class="carousel-item h-100">
+                                        <img class="d-block w-100 h-100 object-fit-cover" src="img/escopo/menu.png" alt="Menu principal do sistema Escopo Project">
+                                    </div>
+                                    <div class="carousel-item h-100">
+                                        <img class="d-block w-100 h-100 object-fit-cover" src="img/escopo/excel.png" alt="Tela relacionada à exportação e apoio aos dados do projeto">
+                                    </div>
+                                    <div class="carousel-item h-100">
+                                        <img class="d-block w-100 h-100 object-fit-cover" src="img/escopo/numero.png" alt="Tela de controle e geração de número de projeto ou escopo">
+                                    </div>
+                                    <div class="carousel-item h-100">
+                                        <img class="d-block w-100 h-100 object-fit-cover" src="img/escopo/document.png" alt="Tela de documento ou visualização de escopo gerado">
+                                    </div>
+                                </div>
 
-                    <div class="col-md-8 mt-4">
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                <img class="d-block w-100 rounded" src="img/escopo/antes.png" alt="Tela do menu principal do sistema">
-                                </div>
-                                <div class="carousel-item">
-                                <img class="d-block w-100 rounded" src= "img/escopo/menu.png" alt="Tela do mapa de injetoras">
-                                </div>
-                                <div class="carousel-item">
-                                <img class="d-block w-100 rounded" src= "img/escopo/excel.png" alt="Tela do mapa de injetoras">
-                                </div>
-                                <div class="carousel-item">
-                                <img class="d-block w-100 rounded" src= "img/escopo/numero.png" alt="Tela do mapa de injetoras">
-                                </div>
-                                <div class="carousel-item">
-                                <img class="d-block w-100 rounded" src="img/escopo/document.png" alt="Tela de configurações do sistema">
-                                </div>
-                                
-                                
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Próximo</span>
-                            </button>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Próximo</span>
+                                </button>
                             </div>
                         </div>
-            </div>
-
-            <div class="row d-flex justify-content-center">
-
-                <div class="col-md-11 mt-2">
-                    <h5 class="card-title mt-4 d-flex justify-content-center" style="font-size:2rem; color: white">Tecnologias Utilizadas</h5>
-                            <p class="d-flex justify-content-center gap-3" id="tecnologias">
-                    
-                                <i class="fa-brands fa-python mt-2"></i>
-                                <i class="fa-brands fa-js mt-2"></i>
-                                <i class="fa-brands fa-css3-alt mt-2"></i>
-                                <i class="fa-brands fa-html5 mt-2"></i>
-                                <i class="fa-brands fa-postgresql mt-2"></i>
-                                <i class="fa-brands fa-bootstrap mt-2"></i>
-                                <i class="fa-brands fa-docker mt-2"></i>
-                                <i class="fa-brands fa-linux mt-2"></i>
-                                <i class="fa-brands fa-git-alt mt-2"></i>
-                                <i class="fa-brands fa-github mt-2"></i>
-
-
-                </div>
-
-                <div class="col-md-11 mt-5">
-                    <div class="ratio ratio-16x9">
-                       
                     </div>
                 </div>
-            </div>
+            </section>
 
+            <section class="content-block mb-4">
+                <div class="section-head">
+                    <span class="section-tag">Sobre o projeto</span>
+                    <h2>O que foi construído</h2>
+                </div>
+
+                <div class="card glass-card">
+                    <div class="card-body p-4 p-lg-5">
+                        <p class="section-copy mb-3">
+                            O Escopo Project foi desenvolvido para substituir um processo dependente de planilhas Excel, fórmulas difíceis de manter e informações espalhadas entre arquivos e equipes.
+                        </p>
+                        <p class="section-copy mb-0">
+                            A solução centraliza a criação de escopos e projetos em uma aplicação web interna, reduz retrabalho, melhora a rastreabilidade e facilita a consulta histórica dos dados mais importantes para Engenharia Industrial e Manutenção.
+                        </p>
+
+                        <div class="tools-container mt-4">
+                            <span class="badge text-bg-danger">Python</span>
+                            <span class="badge text-bg-danger">Flask</span>
+                            <span class="badge text-bg-danger">PostgreSQL</span>
+                            <span class="badge text-bg-danger">JavaScript</span>
+                            <span class="badge text-bg-danger">HTML5</span>
+                            <span class="badge text-bg-danger">CSS3</span>
+                            <span class="badge text-bg-danger">Bootstrap</span>
+                            <span class="badge text-bg-danger">Docker</span>
+                            <span class="badge text-bg-danger">Linux</span>
+                            <span class="badge text-bg-danger">Nginx</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-block mb-4">
+                <div class="section-head">
+                    <span class="section-tag">Qualificações do projeto</span>
+                    <h2>Por que essa solução se destaca</h2>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card feature-card h-100">
+                            <div class="card-body p-4">
+                                <div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div>
+                                <h5 class="card-title">Centralização</h5>
+                                <p class="card-text">Um único ponto de entrada para criar, consultar e acompanhar projetos e escopos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card feature-card h-100">
+                            <div class="card-body p-4">
+                                <div class="feature-icon"><i class="fa-solid fa-sliders"></i></div>
+                                <h5 class="card-title">Padronização</h5>
+                                <p class="card-text">Fluxo consistente, com campos organizados e menos dependência de preenchimentos manuais.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card feature-card h-100">
+                            <div class="card-body p-4">
+                                <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <h5 class="card-title">Escalabilidade</h5>
+                                <p class="card-text">Base preparada para crescer com novas regras, novos campos e novas telas sem perder organização.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card feature-card h-100">
+                            <div class="card-body p-4">
+                                <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                <h5 class="card-title">Rastreabilidade</h5>
+                                <p class="card-text">Registro histórico das informações para consulta, auditoria interna e análise posterior.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-block mb-4">
+                <div class="section-head">
+                    <span class="section-tag">Ganhos do projeto</span>
+                    <h2>Impacto operacional gerado</h2>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-7">
+                        <div class="card glass-card h-100">
+                            <div class="card-body p-4 p-lg-5">
+                                <ul class="gain-list mb-0">
+                                    <li>Redução da dependência de planilhas e fórmulas complexas.</li>
+                                    <li>Maior velocidade na criação de projetos e escopos.</li>
+                                    <li>Menos retrabalho com reutilização de informações recorrentes.</li>
+                                    <li>Melhoria na organização e na leitura dos dados por diferentes áreas.</li>
+                                    <li>Controle mais confiável de numeração, histórico e documentos gerados.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="card insight-card h-100">
+                            <div class="card-body p-4 p-lg-5">
+                                <h5 class="card-title mb-3">Resultado prático</h5>
+                                <p class="card-text mb-3">
+                                    O processo ficou mais simples para o usuário interno e mais sustentável para manutenção técnica, com melhor organização da informação e menos pontos de falha.
+                                </p>
+                                <p class="card-text mb-0">
+                                    A solução facilita evolução futura sem quebrar o fluxo principal do negócio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-block mb-4">
+                <div class="section-head">
+                    <span class="section-tag">Arquitetura utilizada</span>
+                    <h2>Estrutura técnica do sistema</h2>
+                </div>
+
+                <div class="card glass-card">
+                    <div class="card-body p-4 p-lg-5">
+                        <p class="section-copy text-center mb-4">
+                            A arquitetura foi pensada para transformar um fluxo manual em uma aplicação web centralizada, com persistência de dados, documentação organizada e suporte ao uso interno.
+                        </p>
+
+                        <div class="row g-3 text-center">
+                            <div class="col-md-3">
+                                <div class="arch-card h-100">
+                                    <i class="fa-solid fa-users-gear arch-icon"></i>
+                                    <h6>Usuários internos</h6>
+                                    <p>Engenharia e manutenção acessam o sistema para criar e consultar informações.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="arch-card h-100">
+                                    <i class="fa-brands fa-python arch-icon"></i>
+                                    <h6>Flask Backend</h6>
+                                    <p>Regras de negócio, rotas e processamento central da aplicação.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="arch-card h-100">
+                                    <i class="fa-solid fa-database arch-icon"></i>
+                                    <h6>Banco de dados</h6>
+                                    <p>Armazenamento estruturado de projetos, escopos, histórico e dados recorrentes.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="arch-card h-100">
+                                    <i class="fa-brands fa-linux arch-icon"></i>
+                                    <h6>Servidor Linux</h6>
+                                    <p>Publicação e manutenção em ambiente interno com suporte ao ciclo da aplicação.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-center mt-4 mb-0 architecture-flow">
+                            Fluxo: Usuário → Interface Web → Flask → Banco de Dados → Documento / Histórico / Consulta
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-block mb-4">
+                <div class="section-head">
+                    <span class="section-tag">Stack</span>
+                    <h2>Tecnologias utilizadas</h2>
+                </div>
+
+                <div class="card glass-card">
+                    <div class="card-body p-4 p-lg-5">
+                        <p class="d-flex justify-content-center gap-3 flex-wrap mb-0 technologies-strip" id="tecnologias">
+                            <i class="fa-brands fa-python" title="Python"></i>
+                            <i class="fa-brands fa-js" title="JavaScript"></i>
+                            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                            <i class="fa-brands fa-html5" title="HTML5"></i>
+                            <i class="fa-solid fa-database" title="Database"></i>
+                            <i class="fa-brands fa-bootstrap" title="Bootstrap"></i>
+                            <i class="fa-brands fa-docker" title="Docker"></i>
+                            <i class="fa-brands fa-linux" title="Linux"></i>
+                            <i class="fa-brands fa-git-alt" title="Git"></i>
+                            <i class="fa-brands fa-github" title="GitHub"></i>
+                        </p>
+                    </div>
+                </div>
+            </section>
 
             
-            
+
+            <section class="content-block">
+                <div class="section-head">
+                    <span class="section-tag">Reflexão técnica</span>
+                    <h2>Desafios e aprendizados</h2>
+                </div>
+
+                <div class="row g-4 mb-2">
+                    <div class="col-lg-6">
+                        <div class="card glass-card h-100">
+                            <div class="card-body p-4 p-lg-5">
+                                <h5 class="card-title mb-3">Technical Challenges</h5>
+                                <ul class="card-text challenge-list mb-0">
+                                    <li>Substituir um processo baseado em Excel por uma aplicação web centralizada.</li>
+                                    <li>Organizar dados de projetos e escopos de forma mais estruturada.</li>
+                                    <li>Criar uma experiência simples para usuários internos não técnicos.</li>
+                                    <li>Preparar o sistema para futuras melhorias, novos campos e novas regras de negócio.</li>
+                                    <li>Manter consistência entre geração de números, histórico e documentos.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card glass-card h-100">
+                            <div class="card-body p-4 p-lg-5">
+                                <h5 class="card-title mb-3">Learning Outcomes</h5>
+                                <ul class="card-text challenge-list mb-0">
+                                    <li>Desenvolvimento backend com Python e Flask.</li>
+                                    <li>Modelagem e persistência de dados em banco relacional.</li>
+                                    <li>Criação de interfaces web focadas em produtividade operacional.</li>
+                                    <li>Uso de Linux, Docker e Git no ciclo de desenvolvimento.</li>
+                                    <li>Transformação de um processo manual em um sistema mais escalável.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </div>
 
-    <!-- Bootstrap JS Bundle (necessário para o carrossel e outros componentes interativos) -->
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-    
 </html>
