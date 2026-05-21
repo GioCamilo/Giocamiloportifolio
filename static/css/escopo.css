@@ -169,6 +169,8 @@ body {
 
 .gallery-panel img {
     min-height: 420px;
+    object-fit: contain;
+    background: rgba(7, 9, 13, 0.55);
 }
 
 .section-head {
